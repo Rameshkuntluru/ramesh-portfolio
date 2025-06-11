@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ramesh Kuntluru | Frontend Developer</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    body {
+      transition: background-color 0.3s, color 0.3s;
+      background-color: #ffffff;
+      color: #000000;
+    }
+    .dark-mode {
+      background-color: #121212;
+      color: #f0f0f0;
+    }
+    .dark-mode a {
+      color: #90caf9;
+    }
+    header, nav, section, footer {
+      padding: 1rem;
+    }
+    a {
+      color: #007bff;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .dark-toggle {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      cursor: pointer;
+      font-size: 1.5rem;
+      background: none;
+      border: none;
+      color: inherit;
+      z-index: 1000;
+    }
+    h2, h3 {
+      color: inherit;
+    }
+    .typing {
+      display: inline;
+      border-right: 2px solid #000;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+    #progressBar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 5px;
+      background: #007bff;
+      z-index: 9999;
+      width: 0%;
+    }
+
+     #backToTop {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      padding: 10px 15px;
+      font-size: 1.2rem;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      display: none;
+      z-index: 999;
+    }
+    #backToTop:hover {
+      background-color: #0056b3;
+    }
+    #preloader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 2000;
+    }
+    #preloader.hidden {
+      display: none;
+    }
+    .spinner {
+      border: 5px solid #f3f3f3;
+      border-top: 5px solid #007bff;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      animation: spin 1s linear infinite;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="preloader"><div class="spinner"></div></div>
+
+  <button class="dark-toggle" onclick="toggleDarkMode()">
+    <div id="progressBar"></div>
+    <i class="fas fa-moon"></i>
+  </button>
+
+  <header data-aos="fade-down">
+    <nav>
+      <h1>Ramesh Kuntluru</h1>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="home" data-aos="zoom-in">
+    <div class="hero-text" style="text-align:center">
+     <div style="width:150px; height:150px; border-radius:50%; overflow:hidden; margin: 0 auto 1rem auto;">
+  <img src="rameshpic.jpg" alt="Ramesh Photo" 
+       style="width:100%; height:100%; object-fit:cover; object-position: center;">
+</div>
+
+      <h2><span id="typing-text"></span></h2>
+      <p>BSc Computers Graduate | Frontend Developer</p>
+    </div>
+  </section>
+
+  <section id="about" data-aos="fade-up">
+    <h2>About Me</h2>
+    <p>
+      Motivated and detail-oriented Frontend Developer with experience in building responsive web applications using HTML,
+      CSS, JavaScript, and React. Certified from TEKS Academy, Hyderabad. Proficient in Git, Bootstrap, Tailwind CSS,
+      and modern UI/UX principles.
+    </p>
+  </section>
+
+  <section id="skills" data-aos="fade-up">
+    <h2>Skills</h2>
+    <ul>
+      <li>HTML5, CSS3, JavaScript (ES6+)</li>
+      <li>React, Bootstrap, Tailwind CSS</li>
+      <li>Version Control with Git & GitHub</li>
+      <li>Responsive Web Design & Debugging Tools</li>
+    </ul>
+    <p><a href="kuntlururameshresumef.pdf" download>📄 Download My Resume</a></p>
+  </section>
+
+  <section id="projects" data-aos="fade-up">
+    <h2>Projects</h2>
+    <div class="project">
+      <img src="project1.jpg" alt="Project 1 Screenshot" style="width:100%; max-height:200px; object-fit:cover; border-radius: 8px;">
+      <h3>Portfolio Website</h3>
+      <p>A personal portfolio site built with HTML, CSS, and JS to showcase my skills and projects.</p>
+      <a href="https://rameshkuntluru.github.io/portfolio" target="_blank"><i class="fas fa-external-link-alt"></i> View Project</a>
+    </div>
+    <div class="project">
+      <img src="project2.jpg" alt="Project 2 Screenshot" style="width:100%; max-height:200px; object-fit:cover; border-radius: 8px;">
+      <h3>Todo App</h3>
+      <p>A simple and elegant to-do list app developed using JavaScript for daily productivity.</p>
+      <a href="https://rameshkuntluru.github.io/todo-app" target="_blank"><i class="fas fa-external-link-alt"></i> View Project</a>
+    </div>
+    <div class="project">
+      <img src="project3.jpg" alt="Project 3 Screenshot" style="width:100%; max-height:200px; object-fit:cover; border-radius: 8px;">
+      <h3>Weather App</h3>
+      <p>A weather forecast app that fetches real-time data using an external weather API and shows local temperature, humidity, and forecast.</p>
+      <a href="https://rameshkuntluru.github.io/weather-app" target="_blank"><i class="fas fa-external-link-alt"></i> View Project</a>
+    </div>
+  </section>
+
+  <section id="certifications">
+  <h2>Certifications</h2>
+  <div class="cert-grid">
+    <!-- Certificate Card -->
+    <div class="cert-card">
+        <div class="cert-info">
+        <h3>Frontend Developer</h3>
+        <p>
+        <img src="tekslogo.jpg" alt="TEKS" width="20"> TEKS Academy |
+         <a href="rameshfrontendcertificate.pdf" target="_blank" title="View PDF">
+        <i class="fas fa-file-pdf" style="color:rgb(175, 28, 28); font-size: 18px;"></i>
+        </a>
+        </p>
+      </div>
+    </div>
+
+    <div class="cert-card">
+        <div class="cert-info">
+        <h3>Python Developer</h3>
+        <h6>Long term Internship</h6>
+        <p>
+        <img src="parmylogo.png" alt="PARMY" width="20"> Parmy Technologies |
+         <a href="parmypythoncertificate.pdf" target="_blank" title="View PDF">
+        <i class="fas fa-file-pdf" style="color:rgb(175, 28, 28); font-size: 18px;"></i>
+        </a>
+        </p>
+      </div>
+    </div>
+
+    <div class="cert-card">
+        <div class="cert-info">
+        <h3>Salesforce Developer</h3>
+        <h6>Short term Virtual Internship</h6>
+        <p>
+        <img src="smartinternzsalesforce.png" alt="SMART" width="20"> Salesforce Smartinternz |
+         <a href="salesforcesmartinternzcertificate.pdf" target="_blank" title="View PDF">
+        <i class="fas fa-file-pdf" style="color:rgb(175, 28, 28); font-size: 18px;"></i>
+        </a>
+        </p>
+      </div>
+    </div>
+
+    <div class="cert-card">
+        <div class="cert-info">
+        <h3>M.S.-OFFICE</h3>
+        <p>
+        <img src="ditslogo.jpeg" alt="DITS" width="20"> DITS TECHNOLOGIES |
+         <a href="ditsmsofficecertificate.pdf" target="_blank" title="View PDF">
+        <i class="fas fa-file-pdf" style="color:rgb(175, 28, 28); font-size: 18px;"></i>
+        </a>
+        </p>
+      </div>
+    </div>
+
+    <!-- Add more cards here -->
+  </div>
+</section>
+
+<!-- LIGHTBOX Modal -->
+<div id="lightbox" class="lightbox">
+  <span class="lightbox-close">&times;</span>
+  <img class="lightbox-img" id="lightbox-img">
+</div>
+
+
+  <section id="contact" data-aos="fade-up">
+    <h2>Contact</h2>
+    <p><i class="fas fa-envelope"></i> Email: <a href="mailto:rameshkuntluru07@gmail.com">rameshkuntluru07@gmail.com</a></p>
+    <p><i class="fas fa-phone"></i> Phone: <a href="tel:+919381429499">9381429499</a></p>
+    <p><i class="fab fa-linkedin"></i> LinkedIn: <a href="https://www.linkedin.com/in/ramesh-kuntluru-34450726b" target="_blank">Profile</a></p>
+    <p><i class="fab fa-github"></i> GitHub: <a href="https://github.com/Rameshkuntluru" target="_blank">GitHub</a></p>
+    <br>
+    <form onsubmit="return validateForm()" style="max-width: 500px; margin: auto;">
+    <input type="text" id="name" placeholder="Your Name" 
+         style="width:100%; height: 50px; font-size: 16px; margin-bottom:10px;" required />
+  
+    <input type="email" id="email" placeholder="Your Email" 
+         style="width:100%; height: 50px; font-size: 16px; margin-bottom:10px;" required />
+  
+    <textarea id="message" placeholder="Your Message" 
+            style="width:100%; height: 150px; font-size: 16px; margin-bottom:10px;" required></textarea>
+  
+    <button type="submit" style="padding: 12px 25px; font-size: 16px;">Send</button>
+    </form>
+
+ </section id="contact" data-aos="fade-up">
+
+  <footer>
+    <p>Designed & Built by Ramesh Kuntluru &copy; 2025</p>
+  </footer>
+
+  <button id="backToTop" onclick="scrollToTop()">⬆ Back to Top</button>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+
+    window.addEventListener("load", () => {
+      document.getElementById("preloader").classList.add("hidden");
+    });
+
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+      localStorage.setItem('darkMode', document.body.classList.contains('dark-mode'));
+    }
+
+    window.onload = () => {
+      if (localStorage.getItem('darkMode') === 'true') {
+        document.body.classList.add('dark-mode');
+      }
+    };
+
+    const text = "Hi, I'm Ramesh";
+    let index = 0;
+    const typingElement = document.getElementById("typing-text");
+    function type() {
+      if (index < text.length) {
+        typingElement.innerHTML += text.charAt(index);
+        index++;
+        setTimeout(type, 100);
+      }
+    }
+    type();
+
+    const backToTop = document.getElementById("backToTop");
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 300) {
+        backToTop.style.display = "block";
+      } else {
+        backToTop.style.display = "none";
+      }
+    });
+
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+
+    window.onscroll = () => {
+    const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+    const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const progress = (scrollTop / scrollHeight) * 100;
+    document.getElementById("progressBar").style.width = progress + "%";
+    };
+
+    const images = document.querySelectorAll('.cert-img');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const closeBtn = document.querySelector('.lightbox-close');
+
+    images.forEach(img => {
+    img.addEventListener('click', () => {
+      lightbox.style.display = 'flex';
+      lightboxImg.src = img.getAttribute('data-full');
+    });
+    });
+
+    closeBtn.addEventListener('click', () => {
+    lightbox.style.display = 'none';
+    });
+
+    window.addEventListener('click', (e) => {
+    if (e.target === lightbox) {
+      lightbox.style.display = 'none';
+    }
+    });
+
+    function validateForm() {
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const message = document.getElementById("message").value.trim();
+
+    if (!name || !email || !message) {
+    alert("Please fill in all fields.");
+    return false;
+    }
+    alert("Thanks for contacting me, " + name + "!");
+    return false; // simulate submit without sending
+    }
+
+  </script>
+</body>
+
+</html>
+
+
+
+
+
